@@ -1,0 +1,17 @@
+classlist : am_10_classlist.csv
+
+student_identifier : ID
+
+group_size : 4+
+
+- distribute : team_1
+
+- cluster : gender
+
+- balance : math
+
+- balance : programming
+
+- distribute : year
+
+- cluster : identity
