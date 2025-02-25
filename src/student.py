@@ -87,7 +87,7 @@ def attribute_differs(attribute, value):
 
 
 def load_classlist(filename, identifier):
-    inf = csv.reader(open(filename, 'U'))
+    inf = csv.reader(open(filename, 'r'))
 
     # csv api changed in python3, be compatible with both
     try:
@@ -97,7 +97,7 @@ def load_classlist(filename, identifier):
 
     # Strip excess spaces from the header names, since this can lead to tricky
     # bugs later
-    headers = [h.strip() for h in header_line if h.strip() is not '']
+    headers = [h.strip() for h in header_line if h.strip() != '']
     # now make the students from the file
     students = []
     for s in inf:
